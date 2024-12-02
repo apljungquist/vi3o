@@ -36,7 +36,7 @@ jobs:
       run: cibuildwheel --platform linux --output-dir dist
       env:
         CIBW_BEFORE_ALL: 'sed -i -e "s/deb.debian.org/archive.debian.org/" /etc/apt/sources.list; apt-get update; apt-get --yes install libjpeg62-turbo-dev libavcodec-dev libswscale-dev libffi-dev'
-        CIBW_MANYLINUX_X86_64_IMAGE: 'manylinux_2_24'
+        CIBW_MANYLINUX_X86_64_IMAGE: 'manylinux_2_28'
         CIBW_BUILD: ${{ matrix.tag }}
     - name: Install wheel
       run: pip install vi3o --no-index -f dist/
