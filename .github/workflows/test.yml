@@ -24,6 +24,8 @@ jobs:
             tag: 'cp310-manylinux_x86_64'
           - python-version: '3.11'
             tag: 'cp311-manylinux_x86_64'
+          - python-version: '3.12'
+            tag: 'cp312-manylinux_x86_64'
     runs-on: ${{ matrix.os }}
     steps:
     - uses: actions/checkout@v4
